@@ -19,7 +19,6 @@ class FavoriteButtonState extends State<FavoriteButton> {
     return Directionality(
       textDirection: TextDirection.ltr,
         child: CupertinoButton(
-        color: CupertinoColors.white,
         child: _isFavorited ? Icon(CupertinoIcons.heart_fill) : Icon(CupertinoIcons.heart),
         onPressed: _toggleFavorite,
     ));
