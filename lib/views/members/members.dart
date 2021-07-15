@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:karikore/views/members/home.dart';
 import 'package:karikore/views/members/search.dart';
 
+import 'account.dart';
+
 class MembersView extends StatefulWidget {
   MembersView({Key? key}) : super(key: key);
 
@@ -27,6 +29,7 @@ class _MembersViewState extends State<MembersView> {
         switch(index) {
           case 0: return HomeView();
           case 1: return SearchView();
+          case 2: return AccountView();
           default: return Text('');
         }
       },

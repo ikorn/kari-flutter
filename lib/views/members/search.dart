@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:karikore/styles/text_styles.dart';
 
 class SearchView extends StatefulWidget {
   @override
@@ -18,7 +19,9 @@ class _SearchViewState extends State<SearchView> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: CupertinoSearchTextField(),
+        middle: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8),
+            child: CupertinoSearchTextField()),
       ),
       child: SafeArea(
           child: ListView(
@@ -50,11 +53,12 @@ class _SearchByItem extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(title),
+                Text(title, style: TextStyles.caption),
                 Spacer(),
                 Icon(
                   CupertinoIcons.chevron_right,
                   color: CupertinoColors.systemGrey,
+                  size: 16,
                 ),
               ],
             )),

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:karikore/styles/colors.dart';
 import 'package:karikore/views/login.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return CupertinoApp(
       title: 'Flutter Demo',
       theme: CupertinoThemeData(
-        primaryColor: CupertinoColors.activeBlue,
+        primaryColor: KColors.earth,
       ),
       home: LoginView(title: 'Karikore'),
     );
