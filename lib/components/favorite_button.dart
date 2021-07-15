@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class FavoriteButton extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => _FavoriteButtonState();
+  State<StatefulWidget> createState() => FavoriteButtonState();
 }
 
-class _FavoriteButtonState extends State<FavoriteButton> {
+class FavoriteButtonState extends State<FavoriteButton> {
   bool _isFavorited = false;
 
   void _toggleFavorite() {
@@ -17,12 +16,12 @@ class _FavoriteButtonState extends State<FavoriteButton> {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      padding: EdgeInsets.all(0),
-      alignment: Alignment.center,
-      icon: Icon(_isFavorited ? CupertinoIcons.heart_fill : CupertinoIcons.heart),
-      color: Colors.white,
-      onPressed: _toggleFavorite,
-    );
+    return Directionality(
+      textDirection: TextDirection.ltr,
+        child: CupertinoButton(
+        color: CupertinoColors.white,
+        child: _isFavorited ? Icon(CupertinoIcons.heart_fill) : Icon(CupertinoIcons.heart),
+        onPressed: _toggleFavorite,
+    ));
   }
 }
